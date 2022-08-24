@@ -403,3 +403,24 @@ footer::after {
   right: -50px;
   transform: rotateZ(10deg);
 }
+
+.rodape {
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  gap: 10px;
+  color: var(--highlight-color);
+  letter-spacing: 5px;
+}
+
+.gitlogo {
+  max-width: 24px;
+}
+
+.fade-in {
+  animation: fadeIn 5s;
+}
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
