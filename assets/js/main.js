@@ -1,5 +1,5 @@
 import app from './firebase/app.js'
-import { subscribeToHellfireClub } from './firebase/helfireClub.js'
+import { getHellfireClubSubscriptions, subscribeToHellfireClub } from './firebase/helfireClub.js'
 
 // FORM entre para o Clube de D&D
 const txtName = document.getElementById('txtName') 
@@ -20,4 +20,21 @@ btnSubscribe.addEventListener('click', async ()  =>{
 // Salvar objeto no DB...
    const subscriptionId = await subscribeToHellfireClub(subscription)
    console.log(`Inscrito com sucesso: ${subscriptionId}`)
+
+   txtName.value = ''
+   txtEmail.value = ''
+   txtLevel.value = ''
+   txtPersonagem.value = ''
 })
+
+// Retornando a lista do DB salvos
+async function loadData(){
+    const subscriptions = await getHellfireClubSubscriptions()
+
+    console.log(subscriptions)
+}
+
+loadData()
+
+// Printar na tela lista do banco de dados dentro de um Table
+//.....
