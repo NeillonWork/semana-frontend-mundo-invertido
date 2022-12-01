@@ -9,6 +9,12 @@ const txtPersonagem = document.getElementById('txtCharacter')
 
 const btnSubscribe = document.getElementById('btnSubscribe') 
 
+
+//listar cadastrados em tela
+
+const subscriptionList = document.getElementById('subscriptions') 
+
+
 //Chamada do botao ME inscrever
 btnSubscribe.addEventListener('click', async ()  =>{
     const subscription = {
@@ -19,19 +25,25 @@ btnSubscribe.addEventListener('click', async ()  =>{
     }
 // Salvar objeto no DB...
    const subscriptionId = await subscribeToHellfireClub(subscription)
-   console.log(`Inscrito com sucesso: ${subscriptionId}`)
+  // console.log(`Inscrito com sucesso: ${subscriptionId}`)
 
    txtName.value = ''
    txtEmail.value = ''
    txtLevel.value = ''
    txtPersonagem.value = ''
+
+   alert("Inscrito com sucesso")
 })
 
 // Retornando a lista do DB salvos
 async function loadData(){
     const subscriptions = await getHellfireClubSubscriptions()
 
-    console.log(subscriptions)
+    subscriptionList.innerHTML = subscriptions.map(sub =>`
+        <li>${sub.name}</li>
+    `).join('')
+
+   // console.log(subscriptions)
 }
 
 loadData()
