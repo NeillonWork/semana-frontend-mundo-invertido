@@ -40,7 +40,12 @@ async function loadData(){
     const subscriptions = await getHellfireClubSubscriptions()
 
     subscriptionList.innerHTML = subscriptions.map(sub =>`
-        <li>${sub.name}</li>
+          <tr>
+            <td>${sub.name}</td>
+            <td>${sub.email}</td>
+            <td>${sub.level}</td>
+            <td>${sub.personagem}</td>
+          </tr>
     `).join('')
 
    // console.log(subscriptions)

@@ -365,6 +365,18 @@ section {
   color: var(--field-background-color);
 }
 
+.lblInscrito {
+  margin-top: 1rem;
+  align-self: center;
+}
+
+#section-form .form-container table {
+  padding: 1rem;
+  background-color: #b5bbbf;
+  color: var(--field-background-color);
+  border: solid 1px;
+}
+
 /*** FOOTER STYLES ***/
 
 footer {

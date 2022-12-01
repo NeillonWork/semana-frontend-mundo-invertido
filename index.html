@@ -125,12 +125,19 @@
               <button type="button" id="btnSubscribe" onclick="">Me inscrever</button>
               
               <br>
-              <label for="inscritos">Lista de Inscritos</label>
-              <ul name="inscritos" id="subscriptions">
-                <li></li>
-              </ul>
-
-
+            <label for="tableInscritos" class="lblInscrito">Lista de Inscritos:</label>
+              <table name="tableInscritos" class="table">
+                <thead>
+                  <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Level</th>
+                    <th>Personagem</th>
+                  </tr>
+                </thead>
+                <tbody id="subscriptions">
+                </tbody>
+              </table>
             </form>
           </div>
         </div>
