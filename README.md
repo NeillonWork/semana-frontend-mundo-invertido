@@ -44,7 +44,8 @@ Desafios inserido ao projeto:
 - [x] Finalizar a aula 01.
 - [x] Adicionar ao repositorio do Github.
 - [x] Publicar projeto na conta Vercel.
-- [x] DIvulgar projeto no linkEdin.
+- [x] Divulgar projeto no linkEdin.
+- [x] Criar banco de dados no Firebase.
 - [] Estilizar README com meus estilos pessoais <b> - Em andamento</b>.
 - [] Implementado responsividade utilizando <b>@media queries</b>.
 - [] Implementado <b>novas animações as imagens</b>.
